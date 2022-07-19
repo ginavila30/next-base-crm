@@ -19,10 +19,35 @@ public class LoginPage {
     @FindBy(css = ".login-btn")
     private WebElement loginBtn;
 
+    @FindBy(className = "errortext")
+    private WebElement errorText;
+
+    @FindBy(id = "USER_REMEMBER")
+    private WebElement rememberMeCheckBox;
+
+    @FindBy(className = "login-link-forgot-pass")
+    private WebElement forgotPasswordLink;
+
     public void login(String username, String password) {
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
         loginBtn.click();
+    }
+
+    public WebElement getErrorText(){
+        return errorText;
+    }
+
+    public void checkRememberMeBox(){
+        rememberMeCheckBox.click();
+    }
+
+    public WebElement getRememberMeBox(){
+        return rememberMeCheckBox;
+    }
+
+    public void clickForgotPassword(){
+        forgotPasswordLink.click();
     }
 
 }

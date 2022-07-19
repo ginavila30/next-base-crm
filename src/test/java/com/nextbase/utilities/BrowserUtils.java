@@ -71,4 +71,9 @@ public class BrowserUtils {
     public static boolean verify2ListsOfTextEqual(List<String> expectedList, List<String> actualList ){
         return Arrays.equals(expectedList.toArray(),actualList.toArray());
     }
+
+    //This method verifies if a checkbox or radio button option are selected
+    public static boolean boxOrButtonIsSelected(WebElement element){
+       return element.isSelected();
+    }
 }
