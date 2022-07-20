@@ -15,7 +15,6 @@
     </properties>
 
 
-
     <build>
         <plugins>
             <plugin>
@@ -26,7 +25,8 @@
                     <parallel>methods</parallel><!-- set to work with feature files -->
                     <threadCount>4</threadCount> <!-- How many browsers or threads work at a time -->
                     <testFailureIgnore>true</testFailureIgnore> <!-- Wont stop when tests are failing -->
-                    <perCoreThreadCount>false</perCoreThreadCount> <!-- Will give only the threads defined on thread count not extra -->
+                    <perCoreThreadCount>false
+                    </perCoreThreadCount> <!-- Will give only the threads defined on thread count not extra -->
                     <includes>
                         <include>**/CukesRunner*.java</include>
                     </includes>
@@ -87,6 +87,12 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>5.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
         </dependency>
 
         <dependency>
