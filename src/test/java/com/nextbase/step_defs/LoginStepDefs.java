@@ -12,7 +12,7 @@ public class LoginStepDefs {
 
     @Given("User is on login page")
     public void user_is_on_login_page() {
-        BrowserUtils.goToURL(ConfigurationReader.getProperty("url"));
+        BrowserUtils.goToURL(ConfigurationReader.getProperty("url.nextBaseCrm"));
     }
 
     @When("User enters valid {string} and valid {string} and clicks login button")
