@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         glue ="com/nextbase/step_defs",
         dryRun = true,
         publish = true,
-        tags = "@wip"
+        tags = ""
 )
 
 public class CukesRunner {
